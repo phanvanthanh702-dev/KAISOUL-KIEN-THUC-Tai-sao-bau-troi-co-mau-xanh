@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>KAISOUL KIẾN THỨC - Tại sao bầu trời có màu xanh?</title>
+
+<meta name="description"
+content="Tìm hiểu vì sao bầu trời có màu xanh và hiện tượng tán xạ Rayleigh.">
+
+<meta name="keywords"
+content="tại sao bầu trời màu xanh, bầu trời màu xanh, tán xạ Rayleigh, kiến thức khoa học">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    line-height:1.65;
+}
+
+header{
+    background:#ffffff;
+    border-bottom:1px solid #e7ebf2;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:-1px;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#1677ff;
+}
+
+.search{
+    flex:1;
+    max-width:430px;
+}
+
+.search input{
+    width:100%;
+    border:1px solid #dce2eb;
+    border-radius:12px;
+    padding:12px 16px;
+    outline:none;
+    font-size:15px;
+    background:#f7f9fc;
+}
+
+.search input:focus{
+    border-color:#1677ff;
+    background:#fff;
+}
+
+.container{
+    max-width:1050px;
+    margin:30px auto;
+    padding:0 18px;
+}
+
+.category{
+    color:#1677ff;
+    font-weight:800;
+    font-size:13px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+h1{
+    font-size:42px;
+    line-height:1.12;
+    letter-spacing:-1px;
+    margin-bottom:14px;
+}
+
+.subtitle{
+    color:#667085;
+    font-size:17px;
+    margin-bottom:25px;
+}
+
+.cover{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+    box-shadow:0 10px 35px #00000018;
+}
+
+.article{
+    background:white;
+    border-radius:20px;
+    padding:32px;
+    margin-top:25px;
+    box-shadow:0 5px 25px #0000000b;
+}
+
+.article h2{
+    font-size:27px;
+    margin:28px 0 12px;
+}
+
+.article p{
+    color:#354052;
+    font-size:16px;
+    margin-bottom:16px;
+}
+
+.highlight{
+    background:#edf6ff;
+    border-left:5px solid #1677ff;
+    padding:18px;
+    border-radius:10px;
+    margin:22px 0;
+}
+
+.highlight strong{
+    color:#0b5ed7;
+}
+
+.illustration{
+    margin:25px 0;
+}
+
+.illustration img{
+    width:100%;
+    max-height:500px;
+    object-fit:contain;
+    background:#f7f9fc;
+    border-radius:15px;
+    display:block;
+}
+
+.caption{
+    color:#7a8494;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:20px 0;
+}
+
+.step{
+    border:1px solid #e6eaf0;
+    border-radius:14px;
+    padding:18px;
+    background:#fafbfd;
+}
+
+.step-number{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#1677ff;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.step h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.step p{
+    font-size:14px;
+    margin:0;
+}
+
+.fact{
+    background:#f8fafc;
+    border-radius:14px;
+    padding:20px;
+    margin-top:25px;
+}
+
+.fact h3{
+    margin-bottom:8px;
+}
+
+.sources{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #e8ebf0;
+}
+
+.sources a{
+    display:block;
+    color:#1266d6;
+    text-decoration:none;
+    margin:9px 0;
+    font-size:14px;
+}
+
+.no-result{
+    display:none;
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    color:#667085;
+}
+
+footer{
+    margin-top:50px;
+    background:#101828;
+    color:#98a2b3;
+    text-align:center;
+    padding:30px 20px;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .logo{
+        text-align:center;
+    }
+
+    .search{
+        max-width:none;
+    }
+
+    h1{
+        font-size:31px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .cover{
+        height:270px;
+        border-radius:14px;
+    }
+
+    .article{
+        padding:20px;
+        border-radius:15px;
+    }
+
+    .article h2{
+        font-size:23px;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+    <div class="logo">
+        KAISOUL <span>KIẾN THỨC</span>
+    </div>
+
+    <div class="search">
+        <input
+            id="search"
+            type="search"
+            placeholder="Tìm kiếm kiến thức..."
+            autocomplete="off">
+    </div>
+
+</div>
+
+</header>
+
+
+<main class="container">
+
+<div id="result">
+
+    <div class="category">
+        Khoa học
+    </div>
+
+    <h1>
+        Tại sao bầu trời có màu xanh?
+    </h1>
+
+    <p class="subtitle">
+        Một câu hỏi đơn giản nhưng câu trả lời liên quan đến
+        ánh sáng Mặt Trời và khí quyển Trái Đất.
+    </p>
+
+
+    <!-- ẢNH BẦU TRỜI -->
+
+    <img
+        class="cover"
+        src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1600&q=85"
+        alt="Bầu trời xanh">
+
+    
+    <article class="article">
+
+        <p>
+            Khi nhìn lên bầu trời vào một ngày quang mây,
+            chúng ta thường thấy một màu xanh đặc trưng.
+            Nguyên nhân chính là cách ánh sáng Mặt Trời
+            tương tác với các phân tử khí trong khí quyển.
+        </p>
+
+        <div class="highlight">
+            <strong>Tóm tắt:</strong>
+            Ánh sáng Mặt Trời gồm nhiều màu. Khi đi qua
+            khí quyển, các phân tử khí làm ánh sáng bị
+            tán xạ. Ánh sáng xanh có bước sóng ngắn hơn
+            bị tán xạ mạnh hơn các màu đỏ, vì vậy ánh sáng
+            xanh đến mắt chúng ta từ nhiều hướng.
+        </div>
+
+
+        <h2>1. Ánh sáng Mặt Trời không chỉ có màu trắng</h2>
+
+        <p>
+            Ánh sáng Mặt Trời nhìn bằng mắt thường có vẻ trắng,
+            nhưng thực tế nó chứa nhiều thành phần màu khác nhau
+            trong vùng ánh sáng nhìn thấy.
+        </p>
+
+        <p>
+            Mỗi màu có bước sóng khác nhau. Ánh sáng xanh có
+            bước sóng ngắn hơn ánh sáng đỏ.
+        </p>
+
+
+        <h2>2. Ánh sáng đi qua khí quyển</h2>
+
+        <p>
+            Khi ánh sáng Mặt Trời đi vào khí quyển,
+            nó gặp các phân tử khí như nitrogen và oxygen.
+            Những phân tử này làm ánh sáng bị tán xạ
+            theo nhiều hướng.
+        </p>
+
+
+        <!-- HÌNH MINH HỌA -->
+
+        <div class="illustration">
+
+            <img
+                src="https://frce8xp4ye4n.compat.objectstorage.eu-frankfurt-1.oraclecloud.com/blog-assets/thumbnail/56cd85d10f2ebbb6467bb9c33e93fea2/pourquoi-le-ciel-est-bleu-la-science-derriere-les-couleurs.webp"
+                alt="Minh họa tán xạ Rayleigh">
+
+            <div class="caption">
+                Hình minh họa ánh sáng Mặt Trời và hiện tượng
+                tán xạ trong khí quyển.
+            </div>
+
+        </div>
+
+
+        <h2>3. Vì sao màu xanh bị tán xạ mạnh?</h2>
+
+        <p>
+            Hiện tượng này được gọi là
+            <strong>tán xạ Rayleigh</strong>.
+            Các bước sóng ngắn bị tán xạ mạnh hơn các bước
+            sóng dài khi tương tác với các phân tử khí nhỏ
+            trong khí quyển.
+        </p>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">1</div>
+
+                <h3>Ánh sáng Mặt Trời</h3>
+
+                <p>
+                    Ánh sáng chứa nhiều thành phần màu
+                    đi vào khí quyển.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">2</div>
+
+                <h3>Gặp phân tử khí</h3>
+
+                <p>
+                    Ánh sáng tương tác với các phân tử
+                    trong khí quyển.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">3</div>
+
+                <h3>Ánh sáng xanh tán xạ</h3>
+
+                <p>
+                    Ánh sáng xanh bị tán xạ theo nhiều
+                    hướng và đến mắt chúng ta.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <h2>4. Vậy tại sao hoàng hôn lại đỏ?</h2>
+
+        <p>
+            Khi Mặt Trời ở thấp gần đường chân trời,
+            ánh sáng phải đi qua một quãng khí quyển dài hơn.
+            Phần lớn ánh sáng xanh bị tán xạ ra khỏi hướng
+            trực tiếp đến mắt chúng ta.
+        </p>
+
+        <p>
+            Vì vậy, các màu có bước sóng dài hơn như đỏ,
+            cam và vàng có thể nổi bật hơn, tạo nên những
+            màu sắc đặc trưng của bình minh và hoàng hôn.
+        </p>
+
+
+        <div class="fact">
+
+            <h3>💡 Bạn có biết?</h3>
+
+            <p>
+                Bầu trời không phải lúc nào cũng xanh.
+                Màu sắc chúng ta nhìn thấy phụ thuộc vào
+                thành phần khí quyển, vị trí của Mặt Trời
+                và các hạt trong khí quyển.
+            </p>
+
+        </div>
+
+
+        <div class="sources">
+
+            <h2>Nguồn tham khảo</h2>
+
+            <a
+                href="https://spaceplace.nasa.gov/blue-sky/en/"
+                target="_blank"
+                rel="noopener">
+                NASA Space Place — Why Is the Sky Blue?
+            </a>
+
+            <a
+                href="https://www.nesdis.noaa.gov/about/k-12-education/atmosphere/why-the-sky-blue"
+                target="_blank"
+                rel="noopener">
+                NOAA — Why Is the Sky Blue?
+            </a>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<div id="noResult" class="no-result">
+    Không tìm thấy kiến thức phù hợp.
+</div>
+
+</main>
+
+
+<footer>
+    © 2026 KAISOUL KIẾN THỨC
+</footer>
+
+
+<script>
+
+const search = document.getElementById("search");
+const result = document.getElementById("result");
+const noResult = document.getElementById("noResult");
+
+const keywords = [
+    "bầu trời",
+    "bầu trời màu xanh",
+    "tại sao bầu trời màu xanh",
+    "tại sao bầu trời có màu xanh",
+    "bầu trời xanh",
+    "tán xạ rayleigh",
+    "rayleigh",
+    "ánh sáng mặt trời",
+    "khí quyển",
+    "khoa học"
+];
+
+function normalize(text){
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .trim();
+
+}
+
+search.addEventListener("input",function(){
+
+    const value = normalize(this.value);
+
+    if(!value){
+
+        result.style.display = "block";
+        noResult.style.display = "none";
+
+        return;
+
+    }
+
+    const found = keywords.some(keyword => {
+
+        const k = normalize(keyword);
+
+        return k.includes(value) || value.includes(k);
+
+    });
+
+    if(found){
+
+        result.style.display = "block";
+        noResult.style.display = "none";
+
+    }else{
+
+        result.style.display = "none";
+        noResult.style.display = "block";
+
+    }
+
+});
+
+</script>
+
+</body>
+  </html>
