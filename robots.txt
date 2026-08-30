@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phanvanthanh702-dev.github.io/KAISOUL-KIEN-THUC/sitemap.xml
